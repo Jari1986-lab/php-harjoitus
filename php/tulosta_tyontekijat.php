@@ -1,65 +1,31 @@
 <?php
 
-	require_once ("funktiot.php");
-	tarkista_kirjautuminen ("kayttaja");	
-?>
-	
-<?php
-	require_once ("funktiot.php");
-	HTML_alku ("Ty√∂ntekij√§n tulostus");
-	ylaTunniste();
-	navigointi();
-	aloitaSisalto();
-?>	
-
-<?php
-require_once ("../conf.php");
-require_once ("Yhteys.php");
-$yhteys = new Yhteys($palvelin, $kayttaja, $salasana, $kanta);
-
-$sql = "select * from Tyontekija";
-$tulos = $yhteys->suoritasql($sql);
+$yhteys = mysql_connect("mydb.tamk.fi", "p0851455", "Rooma773"); 
+if (!$yhteys)
+{
+	die('EI saada yhteytt‰ tietokantaan!), ' . mysql_error());
+}
+else
+	echo ("Yhteys luotu!");
 
 
-
-mysql_select_db("dbp08514551"); // use-k√§sky√§ vastaava
+mysql_select_db("dbp08514551"); // use-k‰sky‰ vastaava
 $sql = "select *  from Tyontekija";
 
 $tulos = mysql_query($sql);
 	
 echo ("<table border=1>\n");
 	
-	while ($rivi = mysql_fetch_row($tulos)) // toista niin kauan kuin on rivej√§
+	while ($rivi = mysql_fetch_row($tulos)) // toista niin kauan kuin on rivej‰
 	
 {
-	$i=1;
 	echo ("<tr>");
 	foreach ($rivi as $kentta)
 	{
-	if($i==1)
-	{
-	$TyontekijaID=$kentta;
+	echo ("<td>$kentta</td>");
+	
 	}
-		echo ("<td>$kentta</td>");
-		
-		$i++;
-	}
-	echo ("<td><a href='paivita_tyontekija.php?TyontekijaID=$TyontekijaID'>P√§ivit√§</a></td>");
-	echo ("<td><a href='poista_tyontekija.php?TyontekijaID=$TyontekijaID'
-	onclick=\"javascript:return confirm('Haluatko varmasti poistaa?')\">
-	Poista</a></td>");	
 	echo ("</tr>\n");
 }
 echo ("</table>\n");
-$yhteys->suljeyhteys();
 ?>
-
-
-<?php
-require_once ("funktiot.php");
-	lopetaSisalto();
-	alaTunniste();
-	html_loppu();
-
-?>
-

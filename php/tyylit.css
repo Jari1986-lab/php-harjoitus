@@ -1,0 +1,113 @@
+#kehys {
+	width:800px;	
+}
+
+#ylatunniste {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 20px;	
+}
+
+#ylatunniste a:link {color:white; text-decoration:none;}
+#ylatunniste a:hover {color:green;text-decoration:underline;}
+#ylatunniste a:visited {color:white;text-decoration:none;}
+
+#navigointi {
+	border-width: 2px; 
+	border-style: dashed; 
+	float:left; 
+	height:600px; 
+	width:200px; 
+	color:#FFFFFF;
+	background-color:silver;		
+}
+
+#navigointi ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#navigointi li {
+	margin: 0;
+	padding: 0.4em;
+	border-top: 1px solid gray;
+	display: block
+}
+
+#navigointi li:first-child {
+	border: none
+}
+
+#sisalto {
+	width:550px;
+	height:550px; 
+	border-width: 2px; 
+	border-style: dashed;
+	border-color:#FFFFFF;
+	margin-left:18em;
+	padding:25px;
+	background-color:gold;
+}
+
+#alatunniste {clear:both;}
+
+a:link {color:black;text-decoration:none;}
+a:visited {color:black;text-decoration:none;}
+a:hover {color:red;text-decoration:underline;}
+a:active {color:green;text-decoration:underline;}
+
+h3 {color:#CC0000}
+
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+tr.logo  td {
+	padding:50px;
+}
+
+tr.tulostus td {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:inherit;
+	background-color:silver;
+}
+
+td {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:inherit;
+}
+
+th {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+form {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	}
+
+input {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+
+ul {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	list-style-type: none;
+	list-style-position: outside;
+}
+
+li {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+select {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
